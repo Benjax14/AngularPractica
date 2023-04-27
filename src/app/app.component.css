@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+.input {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.space {
+  padding: 1rem;
+}
