@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/domain/book';
 import { bookService } from 'src/service/bookService';
 
-interface Books {
+interface speciality {
     name: string;
 }
 
@@ -12,11 +12,11 @@ interface Books {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-    books: Books[];
+    speciality: speciality[];
     booklist: Book[];
     date: Date | string;
     date2: Date | string;
-    selectBook!: Books;
+    selectBook!: speciality;
     nameBook: string;
     pages: number;
     filteredList: Book[];
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     }
 
     constructor(private bookService: bookService) {
-        this.books = [];
+        this.speciality = [];
         this.booklist = [];
         this.nameBook = "";
         this.pages = 0;
@@ -61,7 +61,7 @@ export class AppComponent implements OnInit {
     }
     
     ngOnInit() {
-        this.books = [
+        this.speciality = [
             { name: 'Matematicas' },
             { name: 'Literatura' },
             { name: 'Quimica' },
